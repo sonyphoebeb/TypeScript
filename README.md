@@ -1,3 +1,5 @@
+# 13-Sep-2025 (Saturday)
+
 # TypeScript Boilerplate Project
 
 A clean, modern TypeScript boilerplate project with comprehensive configuration and development tools.
@@ -122,9 +124,7 @@ This project is licensed under the MIT License.
 
 If you encounter any issues or have questions, please open an issue on the repository.
 
-# 13-Sep-2025 (Saturday)
-
-Topics covered by my trainer:
+## Topics covered by my trainer:
 
 1. Enums in TypeScript
 
