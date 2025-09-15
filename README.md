@@ -121,3 +121,59 @@ This project is licensed under the MIT License.
 ## 🆘 Support
 
 If you encounter any issues or have questions, please open an issue on the repository.
+
+# 13-Sep-2025 (Saturday)
+
+Topics covered by my trainer:
+
+1. Enums in TypeScript
+
+   Numeric Enums
+
+   Type Inference
+
+   Explicit Typing
+
+   Union Types
+
+   Intersection Types
+
+2. Type Aliases & Interfaces
+
+   Type Aliases for custom types
+
+   Interfaces for object structures
+
+   MVC (Model-View-Controller) basics
+
+3. Function Types
+
+   Declaring function signatures
+
+   Assigning types to functions
+
+# 14-Sep-2025 (Sunday)
+
+Topics covered by my trainer:
+
+1. User & Role Assignment
+
+   Using Enums for role definitions
+
+   Type Aliases and Interfaces for user data
+
+   Custom (User-Defined) Data Types
+
+2. Functions (Advanced)
+
+   Optional parameters
+
+   Default parameters
+
+   Rest parameters
+
+   Function overloading
+
+   Arrow functions
+
+   Type safety in functions
