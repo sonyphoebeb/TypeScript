@@ -128,29 +128,29 @@ Topics covered by my trainer:
 
 1. Enums in TypeScript
 
-   Numeric Enums
+   -> Numeric Enums
 
-   Type Inference
+   -> Type Inference
 
-   Explicit Typing
+   -> Explicit Typing
 
-   Union Types
+   -> Union Types
 
-   Intersection Types
+   -> Intersection Types
 
 2. Type Aliases & Interfaces
 
-   Type Aliases for custom types
+   -> Type Aliases for custom types
 
-   Interfaces for object structures
+   -> Interfaces for object structures
 
-   MVC (Model-View-Controller) basics
+   -> MVC (Model-View-Controller) basics
 
 3. Function Types
 
-   Declaring function signatures
+   -> Declaring function signatures
 
-   Assigning types to functions
+   -> Assigning types to functions
 
 # 14-Sep-2025 (Sunday)
 
@@ -158,22 +158,22 @@ Topics covered by my trainer:
 
 1. User & Role Assignment
 
-   Using Enums for role definitions
+   -> Using Enums for role definitions
 
-   Type Aliases and Interfaces for user data
+   -> Type Aliases and Interfaces for user data
 
-   Custom (User-Defined) Data Types
+   -> Custom (User-Defined) Data Types
 
 2. Functions (Advanced)
 
-   Optional parameters
+   -> Optional parameters
 
-   Default parameters
+   -> Default parameters
 
-   Rest parameters
+   -> Rest parameters
 
-   Function overloading
+   -> Function overloading
 
-   Arrow functions
+   -> Arrow functions
 
-   Type safety in functions
+   -> Type safety in functions
