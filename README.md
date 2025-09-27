@@ -178,18 +178,21 @@ Topics covered by my trainer:
 
    -> Type safety in functions
 
+
 <br>
 <h2>27-Sep-2025 (Saturday)</h2>
 
-# 📘 Weekend Practice – 21 Sept 2025
-✅ Topics Covered by Trainer
-1. Function Overloading
+# 📘 Weekend Class – 27 Sept 2025
+
+<h2></h2>✅ Topics Covered by Trainer
+
+<h2></h2> 1. Function Overloading
 
 Same function name with multiple signatures.
 
 Example: function calculate() handling both number addition and string concatenation.
 
-2. Arrow Functions
+<h2></h2> 2. Arrow Functions
 
 Shorter syntax for functions.
 
@@ -197,7 +200,7 @@ Example:
 
 const add = (a: number, b: number): number => a + b;
 
-3. Higher Order Functions & Callbacks with Types
+<h2></h2> 3. Higher Order Functions & Callbacks with Types
 
 Functions that take other functions as arguments or return them.
 
@@ -210,7 +213,7 @@ function operate(a: number, b: number, fn: (x: number, y: number) => number): nu
 const sum = (x: number, y: number) => x + y;
 console.log(operate(5, 3, sum)); // 8
 
-4. OOPs in TypeScript
+<h2></h2> 4. OOPs in TypeScript
 🔹 Class and Object
 
 Creating classes and instances using new.
