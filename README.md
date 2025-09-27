@@ -180,9 +180,8 @@ Topics covered by my trainer:
 
 
 <br>
-<h2>27-Sep-2025 (Saturday)</h2>
 
-# 📘 Weekend Class – 27 Sept 2025
+# 📘 Weekend Class – 27 Sept 2025 (Saturday)
 
 <h2>✅ Topics Covered by Trainer</h2>
 
@@ -198,7 +197,7 @@ Shorter syntax for functions.
 
 Example:
 
-const add = (a: number, b: number): number => a + b;
+    const add = (a: number, b: number): number => a + b;
 
 <h2>3. Higher Order Functions & Callbacks with Types</h2> 
 
@@ -206,12 +205,12 @@ Functions that take other functions as arguments or return them.
 
 Example:
 
-function operate(a: number, b: number, fn: (x: number, y: number) => number): number {
-  return fn(a, b);
-}
+    function operate(a: number, b: number, fn: (x: number, y: number) => number): number {
+    return fn(a, b);
+    }
 
-const sum = (x: number, y: number) => x + y;
-console.log(operate(5, 3, sum)); // 8
+    const sum = (x: number, y: number) => x + y;
+    console.log(operate(5, 3, sum)); // 8
 
 <h2>4. OOPs in TypeScript</h2> 
 
