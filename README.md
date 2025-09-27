@@ -177,3 +177,8 @@ Topics covered by my trainer:
    -> Arrow functions
 
    -> Type safety in functions
+
+<br>
+<h2>27-Sep-2025 (Saturday)</h2>
+
+# TypeScript Boilerplate Project
