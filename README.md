@@ -184,15 +184,15 @@ Topics covered by my trainer:
 
 # 📘 Weekend Class – 27 Sept 2025
 
-<h2></h2>✅ Topics Covered by Trainer
+<h2>✅ Topics Covered by Trainer</h2>
 
-<h2></h2> 1. Function Overloading
+<h2>1. Function Overloading</h2> 
 
 Same function name with multiple signatures.
 
 Example: function calculate() handling both number addition and string concatenation.
 
-<h2></h2> 2. Arrow Functions
+<h2>2. Arrow Functions</h2> 
 
 Shorter syntax for functions.
 
@@ -200,7 +200,7 @@ Example:
 
 const add = (a: number, b: number): number => a + b;
 
-<h2></h2> 3. Higher Order Functions & Callbacks with Types
+<h2>3. Higher Order Functions & Callbacks with Types</h2> 
 
 Functions that take other functions as arguments or return them.
 
@@ -213,7 +213,8 @@ function operate(a: number, b: number, fn: (x: number, y: number) => number): nu
 const sum = (x: number, y: number) => x + y;
 console.log(operate(5, 3, sum)); // 8
 
-<h2></h2> 4. OOPs in TypeScript
+<h2>4. OOPs in TypeScript</h2> 
+
 🔹 Class and Object
 
 Creating classes and instances using new.
