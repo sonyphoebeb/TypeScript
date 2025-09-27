@@ -187,8 +187,6 @@ Topics covered by my trainer:
 
 <h2>1. Function Overloading</h2> 
 
-1. Function Overloading
-
 Function overloading in TypeScript allows you to define multiple function signatures for the same function.
 
 Helps to handle different input types with a single function name.
@@ -197,20 +195,20 @@ Compiler checks which overload signature matches during compilation.
 
 Example:
 
-function greet(name: string): string;
-function greet(age: number): string;
-function greet(value: any): string {
-  if (typeof value === "string") {
+    function greet(name: string): string;
+    function greet(age: number): string;
+    function greet(value: any): string {
+    if (typeof value === "string") {
     return `Hello, ${value}`;
-  } else {
+    } else {
     return `You are ${value} years old.`;
-  }
-}
+     }
+    }
 
-console.log(greet("Sony")); // Hello, Sony
-console.log(greet(25));     // You are 25 years old.
+    console.log(greet("Sony")); // Hello, Sony
+    console.log(greet(25));     // You are 25 years old.
 
-2. Arrow Functions
+<h2> 2. Arrow Functions </h2>
 
 Arrow functions provide a shorter syntax and also lexically bind this.
 
@@ -220,10 +218,10 @@ Best suited for callbacks and inline functions.
 
 Example:
 
-const multiply = (x: number, y: number): number => x * y;
-console.log(multiply(4, 5)); // 20
+    const multiply = (x: number, y: number): number => x * y;
+    console.log(multiply(4, 5)); // 20
 
-3. Higher Order Functions & Callbacks with Types
+<h2> 3. Higher Order Functions & Callbacks with Types </h2>
 
 Higher Order Function (HOF): A function that takes another function as an argument or returns a function.
 
@@ -233,33 +231,34 @@ TypeScript helps enforce strict typing for callbacks.
 
 Example:
 
-function operate(
-  a: number,
-  b: number,
-  callback: (x: number, y: number) => number
-): number {
-  return callback(a, b);
-}
+    function operate(
+    a: number,
+    b: number,
+    callback: (x: number, y: number) => number
+    ): number {
+    return callback(a, b);
+    }
 
-const add = (x: number, y: number) => x + y;
-const sub = (x: number, y: number) => x - y;
+    const add = (x: number, y: number) => x + y;
+    const sub = (x: number, y: number) => x - y;
 
-console.log(operate(10, 5, add)); // 15
-console.log(operate(10, 5, sub)); // 5
+    console.log(operate(10, 5, add)); // 15
+    console.log(operate(10, 5, sub)); // 5
 
-4. OOPs in TypeScript
+<h2> 4. OOPs in TypeScript </h2>
+
 🔹 Class and Object
 
 Classes are blueprints for creating objects.
 
-class Laptop {
-  brand: string;
-  constructor(brand: string) {
+    class Laptop {
+     brand: string;
+    constructor(brand: string) {
     this.brand = brand;
-  }
-}
-let dell = new Laptop("Dell");
-console.log(dell.brand);
+    }
+    }
+    let dell = new Laptop("Dell");
+    console.log(dell.brand);
 
 🔹 Access Modifiers
 
@@ -269,25 +268,25 @@ private → accessible only within the class.
 
 protected → accessible within the class and subclasses.
 
-class Account {
-  private balance: number = 1000;
-  public getBalance() {
+     class Account {
+     private balance: number = 1000;
+     public getBalance() {
     return this.balance;
-  }
-}
-let acc = new Account();
-console.log(acc.getBalance()); // 1000
+    }
+    }
+    let acc = new Account();
+    console.log(acc.getBalance()); // 1000
 
 🔹 Readonly Property
 
 Once assigned, cannot be reassigned.
 
-class Student {
-  readonly rollNo: number;
-  constructor(rollNo: number) {
+     class Student {
+     readonly rollNo: number;
+    constructor(rollNo: number) {
     this.rollNo = rollNo;
-  }
-}
+    }
+    }
 
 🔹 Inheritance & Abstract Class
 
@@ -295,24 +294,23 @@ Inheritance uses extends.
 
 Abstract classes cannot be instantiated directly, they serve as a base class.
 
-abstract class Shape {
-  abstract area(): number;
-}
+    abstract class Shape {
+    abstract area(): number;
+    }
 
-class Circle extends Shape {
-  constructor(private radius: number) { super(); }
-  area(): number {
+    class Circle extends Shape {
+    constructor(private radius: number) { super(); }
+    area(): number {
     return Math.PI * this.radius * this.radius;
-  }
-}
-let c = new Circle(5);
-console.log(c.area()); // 78.5
-
+    }
+    }
+    let c = new Circle(5);
+    console.log(c.area()); // 78.5
 
 ✅ Summary:
 
-Practiced advanced TypeScript concepts like overloading, arrow functions, higher-order functions with callbacks.
+-> Practiced advanced TypeScript concepts like overloading, arrow functions, higher-order functions with callbacks.
 
-Explored OOPs fundamentals: class/object, access modifiers, readonly, inheritance, and abstract classes.
+-> Explored OOPs fundamentals: class/object, access modifiers, readonly, inheritance, and abstract classes.
 
-Clear understanding of type safety while working with modern TypeScript.
+-> Clear understanding of type safety while working with modern TypeScript.
