@@ -1,6 +1,5 @@
-# 13-Sep-2025 (Saturday)
 
-# TypeScript Boilerplate Project
+# TypeScript Boilerplate Project - 13-Sep-2025 (Saturday)
 
 A clean, modern TypeScript boilerplate project with comprehensive configuration and development tools.
 
@@ -314,3 +313,8 @@ Abstract classes cannot be instantiated directly, they serve as a base class.
 -> Explored OOPs fundamentals: class/object, access modifiers, readonly, inheritance, and abstract classes.
 
 -> Clear understanding of type safety while working with modern TypeScript.
+
+
+<br>
+
+# Type System Foundations - 29-Sep-2025 (Monday)
