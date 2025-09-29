@@ -322,7 +322,7 @@ Abstract classes cannot be instantiated directly, they serve as a base class.
 This repo contains all my TypeScript practice code since the start of Module 1.  
 Classes are conducted only on weekends, and I update my learning here after each session. 🚀  
 
-# ✅ Topics Covered
+<h2> ✅ Topics Covered </h2> 
 
 <h2> 📍 Module 1 – Introduction & Setup </h2> 
  
