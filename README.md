@@ -318,3 +318,98 @@ Abstract classes cannot be instantiated directly, they serve as a base class.
 <br>
 
 # Type System Foundations - 29-Sep-2025 (Monday)
+
+This repo contains all my TypeScript practice code since the start of **Module 1**.  
+Classes are conducted only on weekends, and I update my learning here after each session. 🚀  
+
+---
+
+## ✅ Topics Covered
+
+### 📍 Module 1 – Introduction & Setup
+1. **Why TypeScript?**
+   - Superset of JavaScript with static typing.
+   - Better tooling, maintainability, and developer productivity.
+2. **Setting up the Environment**
+   - Installed Node.js & TypeScript (`npm install -g typescript`).
+   - Configured `tsc` and ran first programs.
+3. **First TS Program**
+   - Transpiling `.ts` → `.js` using `tsc filename.ts`.
+   - Running with `node filename.js`.
+
+---
+
+### 📍 Module 2 – Type System Foundations
+
+#### 1. Basic Types
+- **string, number, boolean, null, undefined**
+- Example:
+  ```ts
+  let firstName: string = "Sony";
+  let age: number = 25;
+  let isActive: boolean = true;
+  let nothing: null = null;
+  let notAssigned: undefined = undefined;
+2. Special Types
+any → disables type checking.
+
+unknown → safer than any, needs type checks.
+
+never → functions that never return.
+
+ts
+Copy code
+function throwError(msg: string): never {
+  throw new Error(msg);
+}
+3. Arrays
+Declaring arrays:
+
+ts
+Copy code
+let nums: number[] = [1, 2, 3];
+let names: Array<string> = ["Alice", "Bob"];
+4. Tuples
+Fixed-length, strict order collections:
+
+ts
+Copy code
+let person: [string, number] = ["John", 30];
+let employee: [string, number?] = ["Sony"]; // optional element
+let colors: [string, ...string[]] = ["Primary", "Red", "Blue"];
+📂 Files Created
+intro.ts → Why TypeScript, setup, first program.
+
+basicTypes.ts → string, number, boolean, null, undefined.
+
+specialTypes.ts → any, unknown, never.
+
+arrays-tuples.ts → arrays and tuples practice.
+
+📸 Screenshots
+Screenshots of output are added for reference.
+
+🚀 Next Steps
+Continue Module 2 with Functions & Object Types.
+
+Explore practical projects using tuples and arrays in APIs.
+
+pgsql
+Copy code
+
+Do you also want me to prepare a **clean folder structure suggestion** (like `module1/`, `module2/`) for y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
