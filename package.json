@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/enums.ts",
-    "dev": "ts-node src/enums.ts",
+    "dev": "ts-node src/type-inference-annotations.ts",
     "watch": "tsc --watch",
     "clean": "rimraf dist"
   },
