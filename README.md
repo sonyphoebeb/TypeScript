@@ -318,3 +318,95 @@ Abstract classes cannot be instantiated directly, they serve as a base class.
 <br>
 
 # Type System Foundations - 29-Sep-2025 (Monday)
+
+This repo contains all my TypeScript practice code since the start of Module 1.  
+Classes are conducted only on weekends, and I update my learning here after each session. 🚀  
+
+<h2> ✅ Topics Covered </h2> 
+
+<h2> 📍 Module 1 – Introduction & Setup </h2> 
+ 
+1. Why TypeScript?
+   - Superset of JavaScript with static typing.
+   - Better tooling, maintainability, and developer productivity.
+     
+2. Setting up the Environment
+   - Installed Node.js & TypeScript (`npm install -g typescript`).
+   - Configured `tsc` and ran first programs.
+     
+3. First TS Program
+   - Transpiling `.ts` → `.js` using `tsc filename.ts`.
+   - Running with `node filename.js`.
+
+<h2> 📍 Module 2 – Type System Foundations </h2> 
+
+<h2> 1. Basic Types </h2> 
+
+- string, number, boolean, null, undefined
+  
+- Example:
+  ```ts
+  let firstName: string = "Sony";
+  let age: number = 25;
+  let isActive: boolean = true;
+  let nothing: null = null;
+  let notAssigned: undefined = undefined;
+  
+<h2> 2. Special Types </h2>
+
+any → disables type checking.
+
+unknown → safer than any, needs type checks.
+
+never → functions that never return.
+
+    function throwError(msg: string): never {
+    throw new Error(msg);
+    }
+    
+<h2> 3. Arrays </h2> 
+   
+Declaring arrays:
+
+    let nums: number[] = [1, 2, 3];
+    let names: Array<string> = ["Alice", "Bob"];
+    
+<h2> 4. Tuples </h2> 
+
+Fixed-length, strict order collections:
+
+    let person: [string, number] = ["John", 30];
+    let employee: [string, number?] = ["Sony"]; // optional element
+    let colors: [string, ...string[]] = ["Primary", "Red", "Blue"];
+    
+<h2> 📂 Files Created </h2> 
+
+intro.ts → Why TypeScript, setup, first program.
+
+basicTypes.ts → string, number, boolean, null, undefined.
+
+specialTypes.ts → any, unknown, never.
+
+arrays-tuples.ts → arrays and tuples practice.
+
+<h2> 🚀 Next Steps </h2> 
+
+Continue Module 2 with Functions & Object Types.
+
+Explore practical projects using tuples and arrays in APIs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
