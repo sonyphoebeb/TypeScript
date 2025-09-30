@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/enums.ts",
-    "dev": "ts-node src/union-intersection.ts",
+    "dev": "ts-node src/aliases-vs-interfaces.ts",
     "watch": "tsc --watch",
     "clean": "rimraf dist"
   },
