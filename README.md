@@ -400,7 +400,113 @@ Explore practical projects using tuples and arrays in APIs.
 
 # Type System Foundations - 30-Sep-2025 (Tuesday)
 
+This update covers Enums, Type Inference, Union & Intersection Types, and Type Aliases vs Interfaces.
 
+🔢 4. Enums (Numeric, String, Const)
+
+Enums are used to define a set of named constants.
+
+// Numeric Enum
+enum Direction {
+  Up = 1,
+  Down,
+  Left,
+  Right
+}
+console.log(Direction.Up); // 1
+
+// String Enum
+enum Roles {
+  Admin = "ADMIN",
+  User = "USER",
+  Guest = "GUEST"
+}
+console.log(Roles.Admin); // "ADMIN"
+
+// Const Enum (compiled as inline values)
+const enum Status {
+  Success,
+  Failure
+}
+let s: Status = Status.Success;
+console.log(s); // 0
+
+✍️ 5. Type Inference & Type Annotations
+
+Type Inference → TS figures out the type automatically.
+
+Type Annotations → You explicitly declare the type.
+
+// Type inference
+let message = "Hello TS";  // inferred as string
+
+// Type annotation
+let count: number = 100;
+
+// Function annotation
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+🔗 6. Union & Intersection Types
+
+Union (|) → One type OR another.
+
+Intersection (&) → Combines multiple types.
+
+// Union Example
+let id: string | number;
+id = 101;
+id = "ORD-2025";
+
+// Intersection Example
+type Person = { name: string };
+type Employee = { role: string };
+
+type Staff = Person & Employee;
+
+let staff1: Staff = { name: "Sony", role: "Developer" };
+
+🆚 7. Type Aliases vs Interfaces
+
+Both are used to define custom types, but they differ in flexibility.
+
+// Type Alias
+type UserAlias = {
+  id: number;
+  name: string;
+  email?: string;
+};
+
+// Interface
+interface UserInterface {
+  id: number;
+  name: string;
+  email?: string;
+}
+
+// Extending
+interface Employee extends UserInterface {
+  role: string;
+}
+
+type Admin = UserAlias & { permissions: string[] };
+
+
+✅ Type Alias: Can represent primitives, unions, intersections.
+✅ Interface: Better for objects & extending class contracts.
+
+📌 Summary
+
+Enums: Organize constants.
+
+Inference vs Annotations: TS can guess types, but you can declare explicitly.
+
+Union & Intersection: Powerful type combinations.
+
+Type Aliases vs Interfaces: Both structure data, but use aliases for flexibility and interfaces for contracts.
+
+👉 Next: We’ll move into functions, access modifiers, OOP concepts in TypeScript.
 
 
 
