@@ -527,78 +527,78 @@ Type Aliases vs Interfaces: Both structure data, but use aliases for flexibility
 
 This module covers different ways of working with functions in TypeScript, focusing on type safety, flexibility, and reusability.
 
-🔹 1. Function Typing (parameters, return type)
+<h2> 🔹 1. Function Typing (parameters, return type) </h2>
 
 Functions in TypeScript can explicitly define the types of parameters and the return type.
 
-function add(a: number, b: number): number {
+     function add(a: number, b: number): number {
     return a + b;
-}
+    }
 
-🔹 2. Optional & Default Parameters
+>h2> 🔹 2. Optional & Default Parameters </h2>
 
 Parameters can be optional (?) or have default values.
 
-function greet(name: string, age?: number): string {
+    function greet(name: string, age?: number): string {
     return age ? `Hello ${name}, age ${age}` : `Hello ${name}`;
-}
+    }
 
-function multiply(a: number, b: number = 2): number {
+    function multiply(a: number, b: number = 2): number {
     return a * b;
-}
+    }
 
-🔹 3. Rest Parameters
+<h2>🔹 3. Rest Parameters </h2>
 
 Use ... to accept multiple arguments.
 
-function sumAll(...nums: number[]): number {
+    function sumAll(...nums: number[]): number {
     return nums.reduce((acc, n) => acc + n, 0);
-}
+    }
 
-🔹 4. Function Overloading
+<h2> 🔹 4. Function Overloading </h2>
 
 Functions can have multiple type signatures.
 
-function combine(a: string, b: string): string;
-function combine(a: number, b: number): number;
-function combine(a: any, b: any): any {
+    function combine(a: string, b: string): string;
+    function combine(a: number, b: number): number;
+    function combine(a: any, b: any): any {
     return a + b;
-}
+    }
 
-console.log(combine(10, 20));   // 30
-console.log(combine("Hi ", "TS")); // "Hi TS"
+    console.log(combine(10, 20));   // 30
+    console.log(combine("Hi ", "TS")); // "Hi TS"
 
-🔹 5. Arrow Functions & Type Safety
+<h2> 🔹 5. Arrow Functions & Type Safety </h2>
 
 Arrow functions provide concise syntax and preserve this context.
 
-const numbers: number[] = [1, 2, 3];
-const squared: number[] = numbers.map((n: number): number => n * n);
+    const numbers: number[] = [1, 2, 3];
+    const squared: number[] = numbers.map((n: number): number => n * n);
 
-type User = { id: number; name: string };
-const createUser = (id: number, name: string): User => ({ id, name });
+    type User = { id: number; name: string };
+    const createUser = (id: number, name: string): User => ({ id, name });
 
-🔹 6. Higher-order Functions & Callbacks with Types
+<h2> 🔹 6. Higher-order Functions & Callbacks with Types </h2>
 
 Functions can accept other functions as arguments or return functions.
 
-function processNumbers(nums: number[], callback: (n: number) => number): number[] {
+    function processNumbers(nums: number[], callback: (n: number) => number): number[] {
     return nums.map(callback);
-}
+    }
 
-const doubled = processNumbers([1, 2, 3], (n) => n * 2);
+    const doubled = processNumbers([1, 2, 3], (n) => n * 2);
 
-✅ Key Takeaways
+<h2> ✅ Key Takeaways </h2>
 
-TypeScript enforces strong typing in functions.
+-> TypeScript enforces strong typing in functions.
 
-Supports optional, default, and rest parameters for flexibility.
+-> Supports optional, default, and rest parameters for flexibility.
 
-Overloading allows different behaviors with type safety.
+-> Overloading allows different behaviors with type safety.
 
-Arrow functions make code shorter and keep this scoped correctly.
+-> Arrow functions make code shorter and keep this scoped correctly.
 
-Higher-order functions and callbacks improve reusability.
+-> Higher-order functions and callbacks improve reusability.
 
 
 
