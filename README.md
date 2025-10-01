@@ -521,7 +521,9 @@ Type Aliases vs Interfaces: Both structure data, but use aliases for flexibility
 👉 Next: We’ll move into functions, access modifiers, OOP concepts in TypeScript.
 
 
+<br>
 
+# Functions in TypeScript - 01-Oct-2025 (Wednesday)
 
 
 
