@@ -535,7 +535,7 @@ Functions in TypeScript can explicitly define the types of parameters and the re
     return a + b;
     }
 
->h2> 🔹 2. Optional & Default Parameters </h2>
+<h2> 🔹 2. Optional & Default Parameters </h2>
 
 Parameters can be optional (?) or have default values.
 
