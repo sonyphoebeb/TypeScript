@@ -2,11 +2,11 @@
   "name": "typescript-boilerplate",
   "version": "1.0.0",
   "description": "A boilerplate TypeScript project",
-  "main": "dist/enums.ts",
+  "main": "dist/index.ts",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/enums.ts",
-    "dev": "ts-node src/aliases-vs-interfaces.ts",
+    "start": "node dist/index.ts",
+    "dev": "ts-node src/functions.ts",
     "watch": "tsc --watch",
     "clean": "rimraf dist"
   },
