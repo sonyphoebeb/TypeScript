@@ -611,15 +611,15 @@ This repository contains examples of Object-Oriented Programming (OOP) concepts 
 
 Inheritance allows a class to acquire the properties and methods of another class.
 
-Interface – Defines structure (Device).
+    Interface – Defines structure (Device).
 
-Abstract class – Base class with abstract & concrete methods (Appliance).
+    Abstract class – Base class with abstract & concrete methods (Appliance).
 
-Class Inheritance – WashingMachine extends Appliance.
+    Class Inheritance – WashingMachine extends Appliance.
 
-Multiple Inheritance (via interfaces) – SmartFridge implements multiple interfaces.
+    Multiple Inheritance (via interfaces) – SmartFridge implements multiple interfaces.
 
-Multilevel Inheritance – Animal → Mammal → Dog.
+    Multilevel Inheritance – Animal → Mammal → Dog.
 
 ✔️ Real-time examples: Washing Machine, Smart Fridge, Dog.
 
@@ -627,13 +627,13 @@ Multilevel Inheritance – Animal → Mammal → Dog.
 
 Polymorphism means same function/method behaves differently depending on context.
 
-Overloading (Compile-time) – calculate(a, b) works for both numbers & strings.
+    Overloading (Compile-time) – calculate(a, b) works for both numbers & strings.
 
-Overriding (Runtime) – Shape.area() overridden by Circle.area().
+    Overriding (Runtime) – Shape.area() overridden by Circle.area().
 
-Generics – identity<T> works for different data types.
+    Generics – identity<T> works for different data types.
 
-Compile-time vs Runtime – Difference demonstrated.
+    Compile-time vs Runtime – Difference demonstrated.
 
 ✔️ Real-time examples: Circle Area calculation, flexible generic function.
 
@@ -641,48 +641,48 @@ Compile-time vs Runtime – Difference demonstrated.
 
 Encapsulation is data hiding using access modifiers.
 
-private – Accessible only within the class.
+    private – Accessible only within the class.
 
-protected – Accessible inside the class & subclasses.
+    protected – Accessible inside the class & subclasses.
 
-public – Accessible everywhere.
+    public – Accessible everywhere.
 
 ✔️ Example: BankAccount with private balance, protected accountHolder, public accountNumber.
 
-Deposit money ✅
+    Deposit money ✅
 
-Get balance ✅
+    Get balance ✅
 
-Direct access to balance ❌
+    Direct access to balance ❌
 
 <h2> 🔹 4. Abstraction (abstraction.ts) </h2>
 
 Abstraction means showing only necessary details, hiding implementation.
 
-Abstract Class – Vehicle defines move() but doesn’t implement it.
+    Abstract Class – Vehicle defines move() but doesn’t implement it.
 
-Concrete Classes –
+    Concrete Classes –
 
-Car.move() → "driving on road"
+    Car.move() → "driving on road"
 
-Airplane.move() → "flying in sky"
+    Airplane.move() → "flying in sky"
 
 ✔️ Real-time examples: Tesla Car, Boeing Airplane.
 
 <h2> 🚀 How to Run </h2>
 
-Clone the repo
+-> Clone the repo
 
-Run TypeScript compiler:
+-> Run TypeScript compiler:
 
-tsc inheritance.ts polymorphism.ts encapsulation.ts abstraction.ts
+-> tsc inheritance.ts polymorphism.ts encapsulation.ts abstraction.ts
 
-Execute compiled JavaScript in Node:
+-> Execute compiled JavaScript in Node:
 
-node inheritance.js
-node polymorphism.js
-node encapsulation.js
-node abstraction.js
+    node inheritance.js
+    node polymorphism.js
+    node encapsulation.js
+    node abstraction.js
 
 ✅ Covers all OOP concepts in TypeScript with real-time unique examples.
 
