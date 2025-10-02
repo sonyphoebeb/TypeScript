@@ -607,7 +607,7 @@ Functions can accept other functions as arguments or return functions.
 
 This repository contains examples of Object-Oriented Programming (OOP) concepts in TypeScript, divided into 4 major topics:
 
-🔹 1. Inheritance (inheritance.ts)
+<h2> 🔹 1. Inheritance (inheritance.ts) </h2>
 
 Inheritance allows a class to acquire the properties and methods of another class.
 
@@ -623,7 +623,7 @@ Multilevel Inheritance – Animal → Mammal → Dog.
 
 ✔️ Real-time examples: Washing Machine, Smart Fridge, Dog.
 
-🔹 2. Polymorphism (polymorphism.ts)
+<h2> 🔹 2. Polymorphism (polymorphism.ts) </h2>
 
 Polymorphism means same function/method behaves differently depending on context.
 
@@ -637,7 +637,7 @@ Compile-time vs Runtime – Difference demonstrated.
 
 ✔️ Real-time examples: Circle Area calculation, flexible generic function.
 
-🔹 3. Encapsulation (encapsulation.ts)
+<h2> 🔹 3. Encapsulation (encapsulation.ts) </h2>
 
 Encapsulation is data hiding using access modifiers.
 
@@ -655,7 +655,7 @@ Get balance ✅
 
 Direct access to balance ❌
 
-🔹 4. Abstraction (abstraction.ts)
+<h2> 🔹 4. Abstraction (abstraction.ts) </h2>
 
 Abstraction means showing only necessary details, hiding implementation.
 
@@ -669,14 +669,13 @@ Airplane.move() → "flying in sky"
 
 ✔️ Real-time examples: Tesla Car, Boeing Airplane.
 
-🚀 How to Run
+<h2> 🚀 How to Run </h2>
 
 Clone the repo
 
 Run TypeScript compiler:
 
 tsc inheritance.ts polymorphism.ts encapsulation.ts abstraction.ts
-
 
 Execute compiled JavaScript in Node:
 
@@ -685,15 +684,8 @@ node polymorphism.js
 node encapsulation.js
 node abstraction.js
 
-📂 File Structure
-├── inheritance.ts
-├── polymorphism.ts
-├── encapsulation.ts
-├── abstraction.ts
-└── README.md
-
-
 ✅ Covers all OOP concepts in TypeScript with real-time unique examples.
+
 ✅ Easy to understand, compile, and extend.
 
 
