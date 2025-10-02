@@ -522,6 +522,7 @@ Type Aliases vs Interfaces: Both structure data, but use aliases for flexibility
 
 
 <br>
+
 # Functions in TypeScript - 01-Oct-2025 (Wednesday)
 
 This module covers different ways of working with functions in TypeScript, focusing on type safety, flexibility, and reusability.
@@ -601,7 +602,99 @@ Functions can accept other functions as arguments or return functions.
 
 
 <br>
-# Oops in TypeScript - 02-Oct-2025 (Thursday)
+
+# 📘 TypeScript OOP Concepts Practice - 02-Oct-2025 (Thursday)
+
+This repository contains examples of Object-Oriented Programming (OOP) concepts in TypeScript, divided into 4 major topics:
+
+🔹 1. Inheritance (inheritance.ts)
+
+Inheritance allows a class to acquire the properties and methods of another class.
+
+Interface – Defines structure (Device).
+
+Abstract class – Base class with abstract & concrete methods (Appliance).
+
+Class Inheritance – WashingMachine extends Appliance.
+
+Multiple Inheritance (via interfaces) – SmartFridge implements multiple interfaces.
+
+Multilevel Inheritance – Animal → Mammal → Dog.
+
+✔️ Real-time examples: Washing Machine, Smart Fridge, Dog.
+
+🔹 2. Polymorphism (polymorphism.ts)
+
+Polymorphism means same function/method behaves differently depending on context.
+
+Overloading (Compile-time) – calculate(a, b) works for both numbers & strings.
+
+Overriding (Runtime) – Shape.area() overridden by Circle.area().
+
+Generics – identity<T> works for different data types.
+
+Compile-time vs Runtime – Difference demonstrated.
+
+✔️ Real-time examples: Circle Area calculation, flexible generic function.
+
+🔹 3. Encapsulation (encapsulation.ts)
+
+Encapsulation is data hiding using access modifiers.
+
+private – Accessible only within the class.
+
+protected – Accessible inside the class & subclasses.
+
+public – Accessible everywhere.
+
+✔️ Example: BankAccount with private balance, protected accountHolder, public accountNumber.
+
+Deposit money ✅
+
+Get balance ✅
+
+Direct access to balance ❌
+
+🔹 4. Abstraction (abstraction.ts)
+
+Abstraction means showing only necessary details, hiding implementation.
+
+Abstract Class – Vehicle defines move() but doesn’t implement it.
+
+Concrete Classes –
+
+Car.move() → "driving on road"
+
+Airplane.move() → "flying in sky"
+
+✔️ Real-time examples: Tesla Car, Boeing Airplane.
+
+🚀 How to Run
+
+Clone the repo
+
+Run TypeScript compiler:
+
+tsc inheritance.ts polymorphism.ts encapsulation.ts abstraction.ts
+
+
+Execute compiled JavaScript in Node:
+
+node inheritance.js
+node polymorphism.js
+node encapsulation.js
+node abstraction.js
+
+📂 File Structure
+├── inheritance.ts
+├── polymorphism.ts
+├── encapsulation.ts
+├── abstraction.ts
+└── README.md
+
+
+✅ Covers all OOP concepts in TypeScript with real-time unique examples.
+✅ Easy to understand, compile, and extend.
 
 
 
