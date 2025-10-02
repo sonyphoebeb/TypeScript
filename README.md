@@ -522,7 +522,6 @@ Type Aliases vs Interfaces: Both structure data, but use aliases for flexibility
 
 
 <br>
-
 # Functions in TypeScript - 01-Oct-2025 (Wednesday)
 
 This module covers different ways of working with functions in TypeScript, focusing on type safety, flexibility, and reusability.
@@ -601,6 +600,8 @@ Functions can accept other functions as arguments or return functions.
 -> Higher-order functions and callbacks improve reusability.
 
 
+<br>
+# Oops in TypeScript - 02-Oct-2025 (Thursday)
 
 
 
