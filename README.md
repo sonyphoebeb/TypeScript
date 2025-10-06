@@ -689,6 +689,69 @@ Abstraction means showing only necessary details, hiding implementation.
 ✅ Easy to understand, compile, and extend.
 
 
+<br>
+
+📘 TypeScript Advanced Types Practice – 06-Oct-2025 (Monday)
+
+This repository contains practice exercises for Type Guards in TypeScript, divided into 3 major topics:
+
+<h2> 🔹 1. `typeof` Type Guard </h2>
+
+typeof is used to narrow primitive types (number, string, boolean) at runtime.
+
+Syntax Examples:
+
+if (typeof value === "number") { ... }
+if (typeof value === "string") { ... }
+
+
+✔️ Real-time examples: Add 10 to number, convert string to uppercase.
+
+<h2> 🔹 2. `instanceof` Type Guard </h2>
+
+instanceof checks if an object is an instance of a class.
+
+Syntax Examples:
+
+if (order instanceof Swiggy) { ... }
+if (order instanceof Zomato) { ... }
+
+
+✔️ Real-time examples: Swiggy & Zomato orders handled differently.
+
+<h2> 🔹 3. Custom Type Guards </h2>
+
+Custom type guards allow user-defined type checking for complex objects.
+
+Syntax Examples:
+
+function isBusBooking(booking: HotelBooking | BusBooking): booking is BusBooking { ... }
+
+if (isBusBooking(booking)) { ... }
+else { ... }
+
+
+✔️ Real-time examples: Print HotelBooking vs BusBooking details.
+
+<h2> 🚀 How to Run </h2>
+
+Clone the repo
+
+Compile TypeScript:
+
+tsc typeof.ts instanceof.ts customTypeGuard.ts
+
+
+Run JavaScript in Node:
+
+node typeof.js
+node instanceof.js
+node customTypeGuard.js
+
+
+✅ Covers advanced TypeScript types with real-time examples.
+✅ Small, readable code snippets for quick learning and testing.
+✅ Easy to extend for more type guard exercises.
 
 
 
