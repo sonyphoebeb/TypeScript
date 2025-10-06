@@ -701,9 +701,8 @@ typeof is used to narrow primitive types (number, string, boolean) at runtime.
 
 Syntax Examples:
 
-if (typeof value === "number") { ... }
-if (typeof value === "string") { ... }
-
+    if (typeof value === "number") { ... }
+    if (typeof value === "string") { ... }
 
 ✔️ Real-time examples: Add 10 to number, convert string to uppercase.
 
@@ -713,9 +712,8 @@ instanceof checks if an object is an instance of a class.
 
 Syntax Examples:
 
-if (order instanceof Swiggy) { ... }
-if (order instanceof Zomato) { ... }
-
+    if (order instanceof Swiggy) { ... }
+    if (order instanceof Zomato) { ... }
 
 ✔️ Real-time examples: Swiggy & Zomato orders handled differently.
 
@@ -725,18 +723,19 @@ Custom type guards allow user-defined type checking for complex objects.
 
 Syntax Examples:
 
-function isBusBooking(booking: HotelBooking | BusBooking): booking is BusBooking { ... }
+    function isBusBooking(booking: HotelBooking | BusBooking): booking is BusBooking { ... }
 
-if (isBusBooking(booking)) { ... }
-else { ... }
-
+    if (isBusBooking(booking)) { ... }
+    else { ... }
 
 ✔️ Real-time examples: Print HotelBooking vs BusBooking details.
 
 <h2> 🚀 Take Aways </h2>
 
 ✅ Covers advanced TypeScript types with real-time examples.
+
 ✅ Small, readable code snippets for quick learning and testing.
+
 ✅ Easy to extend for more type guard exercises.
 
 
