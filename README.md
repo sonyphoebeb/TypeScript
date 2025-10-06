@@ -691,7 +691,7 @@ Abstraction means showing only necessary details, hiding implementation.
 
 <br>
 
-📘 TypeScript Advanced Types Practice – 06-Oct-2025 (Monday)
+# 📘 TypeScript Advanced Types Practice – 06-Oct-2025 (Monday)
 
 This repository contains practice exercises for Type Guards in TypeScript, divided into 3 major topics:
 
@@ -733,21 +733,7 @@ else { ... }
 
 ✔️ Real-time examples: Print HotelBooking vs BusBooking details.
 
-<h2> 🚀 How to Run </h2>
-
-Clone the repo
-
-Compile TypeScript:
-
-tsc typeof.ts instanceof.ts customTypeGuard.ts
-
-
-Run JavaScript in Node:
-
-node typeof.js
-node instanceof.js
-node customTypeGuard.js
-
+<h2> 🚀 Take Aways </h2>
 
 ✅ Covers advanced TypeScript types with real-time examples.
 ✅ Small, readable code snippets for quick learning and testing.
