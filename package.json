@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.ts",
-    "dev": "ts-node src/instanceOf.ts",
+    "dev": "ts-node src/instance_of.ts",
     "watch": "tsc --watch",
     "clean": "rimraf dist"
   },
