@@ -601,6 +601,92 @@ Functions can accept other functions as arguments or return functions.
 -> Higher-order functions and callbacks improve reusability.
 
 
+<br>
+
+# 📘 TypeScript OOP Concepts Practice - 02-Oct-2025 (Thursday)
+
+This repository contains examples of Object-Oriented Programming (OOP) concepts in TypeScript, divided into 4 major topics:
+
+<h2> 🔹 1. Inheritance (inheritance.ts) </h2>
+
+Inheritance allows a class to acquire the properties and methods of another class.
+
+    Interface – Defines structure (Device).
+
+    Abstract class – Base class with abstract & concrete methods (Appliance).
+
+    Class Inheritance – WashingMachine extends Appliance.
+
+    Multiple Inheritance (via interfaces) – SmartFridge implements multiple interfaces.
+
+    Multilevel Inheritance – Animal → Mammal → Dog.
+
+✔️ Real-time examples: Washing Machine, Smart Fridge, Dog.
+
+<h2> 🔹 2. Polymorphism (polymorphism.ts) </h2>
+
+Polymorphism means same function/method behaves differently depending on context.
+
+    Overloading (Compile-time) – calculate(a, b) works for both numbers & strings.
+
+    Overriding (Runtime) – Shape.area() overridden by Circle.area().
+
+    Generics – identity<T> works for different data types.
+
+    Compile-time vs Runtime – Difference demonstrated.
+
+✔️ Real-time examples: Circle Area calculation, flexible generic function.
+
+<h2> 🔹 3. Encapsulation (encapsulation.ts) </h2>
+
+Encapsulation is data hiding using access modifiers.
+
+    private – Accessible only within the class.
+
+    protected – Accessible inside the class & subclasses.
+
+    public – Accessible everywhere.
+
+✔️ Example: BankAccount with private balance, protected accountHolder, public accountNumber.
+
+    Deposit money ✅
+
+    Get balance ✅
+
+    Direct access to balance ❌
+
+<h2> 🔹 4. Abstraction (abstraction.ts) </h2>
+
+Abstraction means showing only necessary details, hiding implementation.
+
+    Abstract Class – Vehicle defines move() but doesn’t implement it.
+
+    Concrete Classes –
+
+    Car.move() → "driving on road"
+
+    Airplane.move() → "flying in sky"
+
+✔️ Real-time examples: Tesla Car, Boeing Airplane.
+
+<h2> 🚀 How to Run </h2>
+
+-> Clone the repo
+
+-> Run TypeScript compiler:
+
+-> tsc inheritance.ts polymorphism.ts encapsulation.ts abstraction.ts
+
+-> Execute compiled JavaScript in Node:
+
+    node inheritance.js
+    node polymorphism.js
+    node encapsulation.js
+    node abstraction.js
+
+✅ Covers all OOP concepts in TypeScript with real-time unique examples.
+
+✅ Easy to understand, compile, and extend.
 
 
 
