@@ -745,32 +745,35 @@ Syntax Examples:
 
 Topics Covered:
 
-Type Casting (as keyword)
+-> Type Casting (as keyword)
 
-Literal Types
+-> Literal Types
 
 <h2>🔹 Type Casting (as keyword) </h2>
 
 Concept:
+
 Type Casting is used in TypeScript to explicitly tell the compiler the type of a variable when it cannot automatically infer it.
 It is especially useful when working with values of type any, or when interacting with DOM elements or JSON responses.
 
 ✅ Example:
-let someValue: any = "Hello TypeScript";
-let strLength: number = (someValue as string).length;
-console.log(strLength); // Output: 15
+
+    let someValue: any = "Hello TypeScript";
+    let strLength: number = (someValue as string).length;
+    console.log(strLength); // Output: 15
 
 ✅ Example (Object Casting)
-type Employee = { id: number; name: string };
-const employee = {} as Employee;
-employee.id = 1;
-employee.name = "Sony";
-console.log(employee);
+
+    type Employee = { id: number; name: string };
+    const employee = {} as Employee;
+    employee.id = 1;
+    employee.name = "Sony";
+    console.log(employee);
 
 ✅ Example (DOM Casting)
-const input = document.querySelector("input") as HTMLInputElement;
-input.value = "Hello!";
 
+    const input = document.querySelector("input") as HTMLInputElement;
+    input.value = "Hello!";
 
 💡 Tip:
 
@@ -778,7 +781,7 @@ as is preferred over the older angle-bracket (<Type>value) syntax for JSX compat
 
 Always ensure the type you’re casting to is valid — casting doesn’t change the runtime type.
 
-🔹 3. Literal Types
+<h2>🔹 Literal Types </h2>
 
 Concept:
 Literal types restrict a variable to a specific set of values instead of any value of that type.
