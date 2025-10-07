@@ -739,5 +739,71 @@ Syntax Examples:
 ✅ Easy to extend for more type guard exercises.
 
 
+<br>
 
+# 📘 Module 5 – Advanced Types (Part 2)
+Topics Covered:
+
+Type Casting (as keyword)
+
+Literal Types
+
+🔹 2. Type Casting (as keyword)
+
+Concept:
+Type Casting is used in TypeScript to explicitly tell the compiler the type of a variable when it cannot automatically infer it.
+It is especially useful when working with values of type any, or when interacting with DOM elements or JSON responses.
+
+✅ Example:
+let someValue: any = "Hello TypeScript";
+let strLength: number = (someValue as string).length;
+console.log(strLength); // Output: 15
+
+✅ Example (Object Casting)
+type Employee = { id: number; name: string };
+const employee = {} as Employee;
+employee.id = 1;
+employee.name = "Sony";
+console.log(employee);
+
+✅ Example (DOM Casting)
+const input = document.querySelector("input") as HTMLInputElement;
+input.value = "Hello!";
+
+
+💡 Tip:
+
+as is preferred over the older angle-bracket (<Type>value) syntax for JSX compatibility.
+
+Always ensure the type you’re casting to is valid — casting doesn’t change the runtime type.
+
+🔹 3. Literal Types
+
+Concept:
+Literal types restrict a variable to a specific set of values instead of any value of that type.
+They are often used with union types for strong validation.
+
+✅ Example (String Literal)
+let direction: "up" | "down" | "left" | "right";
+direction = "up"; // ✅
+
+✅ Example (Numeric Literal)
+let diceRoll: 1 | 2 | 3 | 4 | 5 | 6;
+diceRoll = 4; // ✅
+
+✅ Example (With Objects)
+type Status = "pending" | "approved" | "rejected";
+interface Order {
+  id: number;
+  item: string;
+  status: Status;
+}
+
+const order1: Order = { id: 1, item: "Coffee", status: "approved" };
+console.log(order1);
+
+🧠 Key Takeaways:
+Concept	Description	Example
+as Keyword	Explicitly tells compiler a variable’s type	let x = value as string;
+Literal Types	Restrict variables to specific values	"on" | "off", 1 | 2 | 3
 
