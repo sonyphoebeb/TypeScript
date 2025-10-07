@@ -784,29 +784,34 @@ Always ensure the type you’re casting to is valid — casting doesn’t change
 <h2>🔹 Literal Types </h2>
 
 Concept:
+
 Literal types restrict a variable to a specific set of values instead of any value of that type.
 They are often used with union types for strong validation.
 
 ✅ Example (String Literal)
-let direction: "up" | "down" | "left" | "right";
-direction = "up"; // ✅
+
+    let direction: "up" | "down" | "left" | "right";
+     direction = "up"; // ✅
 
 ✅ Example (Numeric Literal)
-let diceRoll: 1 | 2 | 3 | 4 | 5 | 6;
-diceRoll = 4; // ✅
+
+    let diceRoll: 1 | 2 | 3 | 4 | 5 | 6;
+    diceRoll = 4; // ✅
 
 ✅ Example (With Objects)
-type Status = "pending" | "approved" | "rejected";
-interface Order {
-  id: number;
-  item: string;
-  status: Status;
-}
 
-const order1: Order = { id: 1, item: "Coffee", status: "approved" };
-console.log(order1);
+    type Status = "pending" | "approved" | "rejected";
+    interface Order {
+     id: number;
+    item: string;
+    status: Status;
+    }
 
-🧠 Key Takeaways:
+    const order1: Order = { id: 1, item: "Coffee", status: "approved" };
+    console.log(order1);
+
+<h2> 🧠 Key Takeaways: </h2>
+
 Concept	Description	Example
 as Keyword	Explicitly tells compiler a variable’s type	let x = value as string;
 Literal Types	Restrict variables to specific values	"on" | "off", 1 | 2 | 3
