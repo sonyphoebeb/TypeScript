@@ -741,14 +741,15 @@ Syntax Examples:
 
 <br>
 
-# 📘 Module 5 – Advanced Types (Part 2)
+# 📘 Module 5 – Advanced Types 
+
 Topics Covered:
 
 Type Casting (as keyword)
 
 Literal Types
 
-🔹 2. Type Casting (as keyword)
+<h2>🔹 Type Casting (as keyword) </h2>
 
 Concept:
 Type Casting is used in TypeScript to explicitly tell the compiler the type of a variable when it cannot automatically infer it.
