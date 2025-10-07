@@ -812,8 +812,25 @@ They are often used with union types for strong validation.
 
 <h2> 🧠 Key Takeaways: </h2>
 
-<t6abl
-Concept	   Description	Example
-as Keyword	Explicitly tells compiler a variable’s type	let x = value as string;
-Literal Types	Restrict variables to specific values	"on" | "off", 1 | 2 | 3
+<table border="1" cellpadding="8" cellspacing="0">
+    <tr>
+      <th>Concept</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>as Keyword</td>
+      <td>Explicitly tells compiler a variable’s type</td>
+      <td>let x = value as string;</td>
+    </tr>
+    <tr>
+      <td>Literal Types</td>
+      <td>Restrict variables to specific values</td>
+      <td>"on" | "off", 1 | 2 | 3</td>
+    </tr>
+  </table>
+
+	   	
+		
+		
 
