@@ -812,7 +812,8 @@ They are often used with union types for strong validation.
 
 <h2> 🧠 Key Takeaways: </h2>
 
-Concept	Description	Example
+<t6abl
+Concept	   Description	Example
 as Keyword	Explicitly tells compiler a variable’s type	let x = value as string;
 Literal Types	Restrict variables to specific values	"on" | "off", 1 | 2 | 3
 
