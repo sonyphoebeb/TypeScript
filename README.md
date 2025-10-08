@@ -833,134 +833,162 @@ They are often used with union types for strong validation.
 
 <br>
 
-🟦 TypeScript Advanced Types Practice
-
-
-
+# 🟦 TypeScript Advanced Types Practice – 08-Oct-2025 (Wednesday)
 
 A repository containing practical examples and exercises for advanced TypeScript types, including:
 
-Discriminated Unions
+🎯 Discriminated Unions
 
-Index Signatures
+📝 Index Signatures
 
-Utility Types (Partial, Pick, Omit, Record, Readonly)
+⚡ Utility Types (Partial, Pick, Omit, Record, Readonly)
 
-Mapped Types
+🛠️ Mapped Types
 
 Each example is self-contained, annotated, and ready to run in any TypeScript environment.
 
 📑 Table of Contents
 
-Discriminated Unions
+🎯 Discriminated Unions
 
-Index Signatures
+📝 Index Signatures
 
-Utility Types
+⚡ Utility Types
 
-Mapped Types
+🛠️ Mapped Types
 
-Example Files Table
+📂 Example Files Table
 
-Usage
+🚀 Usage
 
-🔹 Discriminated Unions
+<h2> 🎯 Discriminated Unions </h2>
 
 Discriminated Unions allow type narrowing using a common property (discriminant).
 
-type SuccessResponse = {
-  status: "success";
-  data: { userId: number; message: string };
-};
+    type SuccessResponse = {
+    status: "success"; // ✅ discriminant property
+     data: { userId: number; message: string };
+    };
+ 
+    type ErrorResponse = {
+    status: "error"; // ❌ discriminant property
+    errorCode: number;
+    errorMessage: string;
+    };
 
-type ErrorResponse = {
-  status: "error";
-  errorCode: number;
-  errorMessage: string;
-};
+    type BackendResponse = SuccessResponse | ErrorResponse;
 
-type BackendResponse = SuccessResponse | ErrorResponse;
-
-function handleResponse(response: BackendResponse) {
-  if (response.status === "success") {
+    function handleResponse(response: BackendResponse) {
+    if (response.status === "success") {
     console.log(`✅ Success: ${response.data.message}`);
-  } else {
+    } else {
     console.log(`❌ Error ${response.errorCode}: ${response.errorMessage}`);
-  }
-}
+     }
+    }
 
-🔹 Index Signatures
+<h2> 📝 Index Signatures </h2> 
 
 Index Signatures allow objects to have dynamic keys while maintaining type safety.
 
-type ScoreCard = {
-  [username: string]: number;
-};
+    type ScoreCard = {
+    [username: string]: number;
+    };
 
-const scores: ScoreCard = { Alice: 95, Bob: 88 };
-console.log(scores["Alice"]); // 95
+    const scores: ScoreCard = { Alice: 95, Bob: 88 };
+    console.log(scores["Alice"]); // 🖨️ 95
 
-🔹 Utility Types
+<h2> ⚡ Utility Types </h2>
 
 Built-in utility types simplify type transformations.
 
-type Product = { id: number; name: string; price: number; category: string };
+    type Product = { id: number; name: string; price: number; category: string };
 
-type ProductPreview = Pick<Product, "name" | "price">;
-type ProductEdit = Partial<Product>;
-type Inventory = Record<string, Product>;
-type FixedProduct = Readonly<Product>;
-type ProductWithoutCategory = Omit<Product, "category">;
+    type ProductPreview = Pick<Product, "name" | "price">;   // 👀 Preview subset
+    type ProductEdit = Partial<Product>;                     // ✏️ Editable fields
+    type Inventory = Record<string, Product>;               // 📦 Inventory map
+    type FixedProduct = Readonly<Product>;                 // 🔒 Readonly product
+    type ProductWithoutCategory = Omit<Product, "category">; // 🚫 Remove category
 
-🔹 Mapped Types
+<h2> 🛠️ Mapped Types </h2>
 
 Mapped Types allow dynamic property transformation.
 
-type Movie = {
-  id: number;
-  title: string;
-  director: string;
-  releaseYear: number;
-  rating: number;
-  genre: string;
-};
+    type Movie = {
+     id: number;
+     title: string;
+     director: string;
+     releaseYear: number;
+     rating: number;
+     genre: string;
+    };
 
-type OptionalReadonlyMovie = {
-  readonly [K in keyof Movie]?: Movie[K];
-};
+// 🛡️ Optional & Readonly
 
-type MovieFlags = {
-  [K in keyof Movie as `is${Capitalize<K>}Selected`]: boolean;
-};
+    type OptionalReadonlyMovie = {
+    readonly [K in keyof Movie]?: Movie[K];
+    };
 
-🔹 Example Files Table
-File Name	Topic	Description
-discriminated-unions.ts	Discriminated Unions	Example of API success/error response handling with type narrowing
-index-signatures.ts	Index Signatures	Demonstrates dynamic object keys with type safety
-utility-types.ts	Utility Types	Shows Partial, Pick, Omit, Record, Readonly with products
-mapped-types.ts	Mapped Types	Illustrates property transformation, renaming, optional & readonly flags using movies
-combined-examples.ts	All Topics	Optional file combining all four topics in one example for reference
-🔹 Usage
+// 🎛️ Boolean flags for UI selection
+
+    type MovieFlags = {
+    [K in keyof Movie as `is${Capitalize<K>}Selected`]: boolean;
+    };
+
+<h2> 📂 Example Files Table </h2>
+
+<table>
+  <tr>
+    <th>File Name</th>
+    <th>Topic</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>discriminated-unions.ts</td>
+    <td>Discriminated Unions</td>
+    <td>Example of API success/error response handling with type narrowing</td>
+  </tr>
+  <tr>
+    <td>index-signatures.ts</td>
+    <td>Index Signatures</td>
+    <td>Demonstrates dynamic object keys with type safety</td>
+  </tr>
+  <tr>
+    <td>utility-types.ts</td>
+    <td>Utility Types</td>
+    <td>Shows Partial, Pick, Omit, Record, Readonly with products</td>
+  </tr>
+  <tr>
+    <td>mapped-types.ts</td>
+    <td>Mapped Types</td>
+    <td>Illustrates property transformation, renaming, optional & readonly flags using movies</td>
+  </tr>
+  <tr>
+    <td>combined-examples.ts</td>
+    <td>All Topics</td>
+    <td>Optional file combining all four topics in one example for reference</td>
+  </tr>
+</table>
+
+
+<h2> 🚀 Usage </h2>
 
 Clone the repository:
 
-git clone https://github.com/your-username/typescript-advanced-types.git
-
+    git clone https://github.com/your-username/typescript-advanced-types.git
 
 Install TypeScript (if not installed):
 
-npm install -g typescript
-
+    npm install -g typescript
 
 Compile and run any example:
 
-tsc examples/discriminated-unions.ts
-node examples/discriminated-unions.js
-
+    tsc examples/discriminated-unions.ts
+    node examples/discriminated-unions.js
 
 Explore all files for detailed examples and console outputs.
 
-License: MIT
+📄 License: MIT
+
 Feel free to use, modify, and contribute!
 	   	
 		
