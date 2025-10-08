@@ -847,7 +847,7 @@ A repository containing practical examples and exercises for advanced TypeScript
 
 Each example is self-contained, annotated, and ready to run in any TypeScript environment.
 
-📑 Table of Contents
+<h2> 📑 Table of Contents </h2> 
 
 🎯 Discriminated Unions
 
