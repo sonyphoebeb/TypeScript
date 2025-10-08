@@ -43,17 +43,20 @@ interface User {
   console.log("🔸 Omit Example:", userWithoutEmail);
   
   // ------------------------------------------------------
-  // 4️⃣ Record<K, T> → Create key-value mapping
   // ------------------------------------------------------
-  type ScoreCard = Record<string, number>;
-  
-  const scores: ScoreCard = {
-    Sony: 85,
-    Alex: 92,
-    Mia: 78,
-  };
-  
-  console.log("🔸 Record Example:", scores);
+// 4️⃣ Record<K, T> → Create key-value mapping
+// ------------------------------------------------------
+type WeatherForecast = Record<string, number>;
+
+const weeklyForecast: WeatherForecast = {
+  Monday: 31,
+  Tuesday: 30,
+  Wednesday: 29,
+  Thursday: 32,
+  Friday: 33,
+};
+
+console.log("🌤 Weekly Forecast:", weeklyForecast);
   
   // ------------------------------------------------------
   // 5️⃣ Readonly<T> → Makes all properties immutable
@@ -71,31 +74,45 @@ interface User {
   // ------------------------------------------------------
   // ✅ Combined Example – Product Interface
   // ------------------------------------------------------
-  interface Product {
-    id: number;
-    name: string;
+  // ------------------------------------------------------
+  // ✅ Combined Example – Product Interface
+  // ------------------------------------------------------
+  type Book = {
+    isbn: string;
+    title: string;
+    author: string;
     price: number;
-    category: string;
-  }
-  
-  type ProductPreview = Pick<Product, "name" | "price">;
-  type ProductEdit = Partial<Product>;
-  type ProductMap = Record<string, Product>;
-  type ReadOnlyProduct = Readonly<Product>;
-  type ProductWithoutCategory = Omit<Product, "category">;
-  
-  const sampleProduct: ProductPreview = { name: "Headphones", price: 2999 };
-  const editableProduct: ProductEdit = { id: 1, price: 3499 };
-  const inventory: ProductMap = {
-    P001: { id: 1, name: "Laptop", price: 59999, category: "Electronics" },
+    genre: string;
   };
-  const fixedProduct: ReadOnlyProduct = { id: 2, name: "Mouse", price: 999, category: "Accessories" };
-  const categoryRemoved: ProductWithoutCategory = { id: 3, name: "Bag", price: 1999 };
   
-  console.log("✅ Combined Examples:");
-  console.log("Preview:", sampleProduct);
-  console.log("Editable:", editableProduct);
-  console.log("Inventory:", inventory);
-  console.log("Readonly:", fixedProduct);
-  console.log("Omit:", categoryRemoved);
+  // Pick: select only title and author
+  type BookPreview = Pick<Book, "title" | "author">;
+  
+  // Partial: all properties optional
+  type BookUpdate = Partial<Book>;
+  
+  // Record: map of string keys to Book
+  type Library = Record<string, Book>;
+  
+  // Readonly: all properties immutable
+  type ReadOnlyBook = Readonly<Book>;
+  
+  // Omit: remove genre property
+  type BookWithoutGenre = Omit<Book, "genre">;
+  
+  // Usage examples
+  const previewBook: BookPreview = { title: "1984", author: "George Orwell" };
+  const updatedBook: BookUpdate = { price: 499 };
+  const library: Library = {
+    B001: { isbn: "123-456", title: "Dune", author: "Frank Herbert", price: 899, genre: "Sci-Fi" },
+  };
+  const lockedBook: ReadOnlyBook = { isbn: "789-101", title: "Sapiens", author: "Yuval Harari", price: 599, genre: "History" };
+  const genreRemoved: BookWithoutGenre = { isbn: "111-222", title: "The Alchemist", author: "Paulo Coelho", price: 299 };
+  
+  console.log("✅ Book Examples:");
+  console.log("Preview:", previewBook);
+  console.log("Update:", updatedBook);
+  console.log("Library:", library);
+  console.log("Readonly:", lockedBook);
+  console.log("Omit Genre:", genreRemoved);
   
