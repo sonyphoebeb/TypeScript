@@ -837,16 +837,6 @@ They are often used with union types for strong validation.
 
 A repository containing practical examples and exercises for advanced TypeScript types, including:
 
-🎯 Discriminated Unions
-
-📝 Index Signatures
-
-⚡ Utility Types (Partial, Pick, Omit, Record, Readonly)
-
-🛠️ Mapped Types
-
-Each example is self-contained, annotated, and ready to run in any TypeScript environment.
-
 <h2> 📑 Table of Contents </h2> 
 
 🎯 Discriminated Unions
@@ -860,6 +850,8 @@ Each example is self-contained, annotated, and ready to run in any TypeScript en
 📂 Example Files Table
 
 🚀 Usage
+
+Each example is self-contained, annotated, and ready to run in any TypeScript environment.
 
 <h2> 🎯 Discriminated Unions </h2>
 
