@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.ts",
-    "dev": "ts-node src/literalTypes.ts",
+    "dev": "ts-node src/discriminated-unions.ts",
     "watch": "tsc --watch",
     "clean": "rimraf dist"
   },
