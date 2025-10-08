@@ -830,6 +830,138 @@ They are often used with union types for strong validation.
     </tr>
   </table>
 
+
+<br>
+
+🟦 TypeScript Advanced Types Practice
+
+
+
+
+A repository containing practical examples and exercises for advanced TypeScript types, including:
+
+Discriminated Unions
+
+Index Signatures
+
+Utility Types (Partial, Pick, Omit, Record, Readonly)
+
+Mapped Types
+
+Each example is self-contained, annotated, and ready to run in any TypeScript environment.
+
+📑 Table of Contents
+
+Discriminated Unions
+
+Index Signatures
+
+Utility Types
+
+Mapped Types
+
+Example Files Table
+
+Usage
+
+🔹 Discriminated Unions
+
+Discriminated Unions allow type narrowing using a common property (discriminant).
+
+type SuccessResponse = {
+  status: "success";
+  data: { userId: number; message: string };
+};
+
+type ErrorResponse = {
+  status: "error";
+  errorCode: number;
+  errorMessage: string;
+};
+
+type BackendResponse = SuccessResponse | ErrorResponse;
+
+function handleResponse(response: BackendResponse) {
+  if (response.status === "success") {
+    console.log(`✅ Success: ${response.data.message}`);
+  } else {
+    console.log(`❌ Error ${response.errorCode}: ${response.errorMessage}`);
+  }
+}
+
+🔹 Index Signatures
+
+Index Signatures allow objects to have dynamic keys while maintaining type safety.
+
+type ScoreCard = {
+  [username: string]: number;
+};
+
+const scores: ScoreCard = { Alice: 95, Bob: 88 };
+console.log(scores["Alice"]); // 95
+
+🔹 Utility Types
+
+Built-in utility types simplify type transformations.
+
+type Product = { id: number; name: string; price: number; category: string };
+
+type ProductPreview = Pick<Product, "name" | "price">;
+type ProductEdit = Partial<Product>;
+type Inventory = Record<string, Product>;
+type FixedProduct = Readonly<Product>;
+type ProductWithoutCategory = Omit<Product, "category">;
+
+🔹 Mapped Types
+
+Mapped Types allow dynamic property transformation.
+
+type Movie = {
+  id: number;
+  title: string;
+  director: string;
+  releaseYear: number;
+  rating: number;
+  genre: string;
+};
+
+type OptionalReadonlyMovie = {
+  readonly [K in keyof Movie]?: Movie[K];
+};
+
+type MovieFlags = {
+  [K in keyof Movie as `is${Capitalize<K>}Selected`]: boolean;
+};
+
+🔹 Example Files Table
+File Name	Topic	Description
+discriminated-unions.ts	Discriminated Unions	Example of API success/error response handling with type narrowing
+index-signatures.ts	Index Signatures	Demonstrates dynamic object keys with type safety
+utility-types.ts	Utility Types	Shows Partial, Pick, Omit, Record, Readonly with products
+mapped-types.ts	Mapped Types	Illustrates property transformation, renaming, optional & readonly flags using movies
+combined-examples.ts	All Topics	Optional file combining all four topics in one example for reference
+🔹 Usage
+
+Clone the repository:
+
+git clone https://github.com/your-username/typescript-advanced-types.git
+
+
+Install TypeScript (if not installed):
+
+npm install -g typescript
+
+
+Compile and run any example:
+
+tsc examples/discriminated-unions.ts
+node examples/discriminated-unions.js
+
+
+Explore all files for detailed examples and console outputs.
+
+License: MIT
+Feel free to use, modify, and contribute!
 	   	
 		
 		
