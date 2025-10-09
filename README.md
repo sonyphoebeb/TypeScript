@@ -988,3 +988,84 @@ Feel free to use, modify, and contribute!
 
 # 🟦 TypeScript Generics Practice – 09-Oct-2025 (Thursday)		
 
+This repository contains practice examples for TypeScript Generics concepts. Generics allow developers to write flexible, reusable code while maintaining strong type safety.
+
+🔹 Topics Covered
+
+Generic Functions & Classes
+Learn how to write functions and classes that can work with different data types while preserving type safety.
+
+Generic Constraints (extends)
+Use constraints to restrict the types that can be passed to generics.
+
+Default Generic Types
+Assign default types to generics to simplify function or class usage when a type is not explicitly provided.
+
+keyof Operator with Generics
+Use keyof to create types based on the keys of other types, enabling safer property access in generic functions or classes.
+
+🔹 Examples
+1️⃣ Generic Function Example
+function identity<T>(value: T): T {
+  return value;
+}
+
+const num = identity<number>(42);
+const str = identity<string>("Hello");
+
+2️⃣ Generic Class Example
+class Box<T> {
+  content: T;
+  constructor(content: T) {
+    this.content = content;
+  }
+
+  getContent(): T {
+    return this.content;
+  }
+}
+
+const numberBox = new Box<number>(123);
+const stringBox = new Box<string>("TypeScript");
+
+3️⃣ Generic Constraint Example
+interface Lengthwise {
+  length: number;
+}
+
+function logLength<T extends Lengthwise>(item: T): void {
+  console.log(item.length);
+}
+
+logLength("Hello"); // string has length
+logLength([1, 2, 3]); // array has length
+
+4️⃣ Default Generic Type Example
+function createArray<T = string>(items: T[]): T[] {
+  return items;
+}
+
+const stringArray = createArray(["a", "b", "c"]); // T inferred as string
+const numberArray = createArray<number>([1, 2, 3]);
+
+5️⃣ keyof with Generics Example
+function getProperty<T, K extends keyof T>(obj: T, key: K) {
+  return obj[key];
+}
+
+const person = { name: "Alice", age: 25 };
+const personName = getProperty(person, "name");
+
+🔹 How to Use
+
+Clone the repository:
+
+git clone <repo-url>
+
+
+Open the TypeScript file in your editor.
+
+Run the examples using:
+
+npx ts-node <file>.ts
+
