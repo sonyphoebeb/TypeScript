@@ -992,16 +992,16 @@ This repository contains practice examples for TypeScript Generics concepts. Gen
 
 <h2> 🔹 Topics Covered </h2>
 
-<h3> Generic Functions & Classes </h3> 
+<h3> 1️⃣ Generic Functions & Classes </h3> 
 Learn how to write functions and classes that can work with different data types while preserving type safety.
 
-<h3> Generic Constraints (extends) </h3>
+<h3> 2️⃣ Generic Constraints (extends) </h3>
 Use constraints to restrict the types that can be passed to generics.
 
-<h3> Default Generic Types </h3> 
+<h3> 3️⃣ Default Generic Types </h3> 
 Assign default types to generics to simplify function or class usage when a type is not explicitly provided.
 
-<h3> keyof Operator with Generics </h3> 
+<h3> 4️⃣ keyof Operator with Generics </h3> 
 Use keyof to create types based on the keys of other types, enabling safer property access in generic functions or classes.
 
 <h2> 🔹 Examples </h2>
@@ -1015,59 +1015,62 @@ Use keyof to create types based on the keys of other types, enabling safer prope
     const num = identity<number>(42);
     const str = identity<string>("Hello");
 
-2️⃣ Generic Class Example
-class Box<T> {
-  content: T;
-  constructor(content: T) {
+<h3> 2️⃣ Generic Class Example </h3> 
+
+    class Box<T> {
+    content: T;
+    constructor(content: T) {
     this.content = content;
-  }
+    }
 
-  getContent(): T {
+     getContent(): T {
     return this.content;
-  }
-}
+    }
+    }
 
-const numberBox = new Box<number>(123);
-const stringBox = new Box<string>("TypeScript");
+    const numberBox = new Box<number>(123);
+    const stringBox = new Box<string>("TypeScript");
 
-3️⃣ Generic Constraint Example
-interface Lengthwise {
-  length: number;
-}
+<h3> 3️⃣ Generic Constraint Example </h3> 
 
-function logLength<T extends Lengthwise>(item: T): void {
-  console.log(item.length);
-}
+    interface Lengthwise {
+    length: number;
+    }
 
-logLength("Hello"); // string has length
-logLength([1, 2, 3]); // array has length
+    function logLength<T extends Lengthwise>(item: T): void {
+    console.log(item.length);
+    }
 
-4️⃣ Default Generic Type Example
-function createArray<T = string>(items: T[]): T[] {
-  return items;
-}
+    logLength("Hello"); // string has length
+    logLength([1, 2, 3]); // array has length
 
-const stringArray = createArray(["a", "b", "c"]); // T inferred as string
-const numberArray = createArray<number>([1, 2, 3]);
+<h3> 4️⃣ Default Generic Type Example </h3> 
 
-5️⃣ keyof with Generics Example
-function getProperty<T, K extends keyof T>(obj: T, key: K) {
-  return obj[key];
-}
+    function createArray<T = string>(items: T[]): T[] {
+    return items;
+    }
 
-const person = { name: "Alice", age: 25 };
-const personName = getProperty(person, "name");
+    const stringArray = createArray(["a", "b", "c"]); // T inferred as string
+    const numberArray = createArray<number>([1, 2, 3]);
 
-🔹 How to Use
+<h3> 5️⃣ keyof with Generics Example </h3> 
 
-Clone the repository:
+    function getProperty<T, K extends keyof T>(obj: T, key: K) {
+    return obj[key];
+    }
+ 
+    const person = { name: "Alice", age: 25 };
+    const personName = getProperty(person, "name");
 
-git clone <repo-url>
+<h2> 🔹 How to Use </h2> 
 
+1. Clone the repository:
 
-Open the TypeScript file in your editor.
+       git clone <repo-url>
 
-Run the examples using:
+2. Open the TypeScript file in your editor.
 
-npx ts-node <file>.ts
+3. Run the examples using:
+
+       npx ts-node <file>.ts
 
