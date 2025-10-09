@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.ts",
-    "dev": "ts-node src/defaultGenericTypes.ts",
+    "dev": "ts-node src/keyofOperatorWithGenerics.ts",
     "watch": "tsc --watch",
     "clean": "rimraf dist"
   },
