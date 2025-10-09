@@ -18,4 +18,17 @@ function displayValue<T = string>(value: T): void {
   console.log("📄 Text Response:", textResponse);
   console.log("📦 JSON Response:", jsonResponse);
   
+  interface ServerResponse<T = boolean> {
+    success: T;
+    message: string;
+  }
+  
+  // ✅ Using default (boolean)
+  const res1: ServerResponse = { success: true, message: "Operation completed" };
+  
+  // ✅ Overriding default
+  const res2: ServerResponse<string> = { success: "true", message: "Done" };
+  
+  console.log("✅ Result 1:", res1);
+  console.log("📝 Result 2:", res2);
   
