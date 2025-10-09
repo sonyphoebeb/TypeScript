@@ -990,28 +990,30 @@ Feel free to use, modify, and contribute!
 
 This repository contains practice examples for TypeScript Generics concepts. Generics allow developers to write flexible, reusable code while maintaining strong type safety.
 
-🔹 Topics Covered
+<h2> 🔹 Topics Covered </h2>
 
-Generic Functions & Classes
+<h3> Generic Functions & Classes </h3> 
 Learn how to write functions and classes that can work with different data types while preserving type safety.
 
-Generic Constraints (extends)
+<h3> Generic Constraints (extends) </h3>
 Use constraints to restrict the types that can be passed to generics.
 
-Default Generic Types
+<h3> Default Generic Types </h3> 
 Assign default types to generics to simplify function or class usage when a type is not explicitly provided.
 
-keyof Operator with Generics
+<h3> keyof Operator with Generics </h3> 
 Use keyof to create types based on the keys of other types, enabling safer property access in generic functions or classes.
 
-🔹 Examples
-1️⃣ Generic Function Example
-function identity<T>(value: T): T {
-  return value;
-}
+<h2> 🔹 Examples </h2>
 
-const num = identity<number>(42);
-const str = identity<string>("Hello");
+<h3> 1️⃣ Generic Function Example </h3>
+
+    function identity<T>(value: T): T {
+    return value;
+    }
+
+    const num = identity<number>(42);
+    const str = identity<string>("Hello");
 
 2️⃣ Generic Class Example
 class Box<T> {
